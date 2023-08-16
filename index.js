@@ -1,12 +1,9 @@
 const express = require('express');
-const bcrypt = require('bcrypt');
 const cors = require('cors');
-const fs = require('fs');
-const path = require('path');
-const mysql = require('mysql2'); // Use mysql2 instead of pg for MySQL connection
+
 
 const app = express();
-const port = 3000; // You can change the port if needed
+const port = 8000; // You can change the port if needed
 
 // Middleware
 app.use(express.json()); // Replace bodyParser with express.json()
@@ -55,5 +52,5 @@ app.use((err, req, res, next) => {
 
 
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running on http://192.168.1.22:${port}`);
 });
